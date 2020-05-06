@@ -5,7 +5,3 @@
 .ng-invalid:not(form)  {
   border-left: 5px solid #a94442; /* red */
 }
-#btnform{
-  size: 90px;
-  margin-left: 3550px;
-}

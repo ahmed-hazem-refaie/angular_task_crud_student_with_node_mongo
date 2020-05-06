@@ -25,10 +25,12 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"            ],
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"]
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -121,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "blogStudent"
+    }
+  },
+  "defaultProject": "blogStudent",
+  "cli": {
+    "analytics": "c8fb5cc6-58f7-4322-a77a-45eb2d537538"
+  }
 }

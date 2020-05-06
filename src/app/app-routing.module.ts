@@ -1,3 +1,4 @@
+import { EditComponent } from './student/edit/edit.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContactusComponent } from './contactus/contactus.component';
@@ -13,7 +14,9 @@ const routes: Routes = [
   {path:"contactus",component:ContactusComponent},
   {path:"about",component:AboutComponent},
   {path:"",component:HomeComponent},
-  
+
+  {path:"student/edit/:id",component:EditComponent},
+
   {path:"student",component:ListComponent,children:[
     {path:"details/:id",component:DetailsComponent}
   ]},

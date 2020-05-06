@@ -1,1 +1,61 @@
-<p>edit works!</p>
+<p>add works!</p>
+
+
+<form (ngSubmit)="onSubmit(form1)"  #form1="ngForm" >
+  <!-- <input type="text" name="_id" [(ngModel)]="nstd._id"> -->
+<!-- <input type="text" name="Name" [(ngModel)]="nstd.Name"> -->
+<!-- <input [disabled]="nstd.Name" type="text" name="Email" [(ngModel)]="nstd.Email"> -->
+<!-- {{nstd | json}} -->
+
+<!-- <<<<<<<>>>>>>>>>> -->
+<div style="width: 190px; margin-left: 20px;">
+<label for="name">Name</label>
+<input type="text" class="form-control" id="name"
+     required
+     [(ngModel)]="nstd.Name" name="Name"
+     #name="ngModel">
+<div [hidden]="name.valid || name.pristine"
+   class="alert alert-danger">
+Name is required
+</div>
+</div>
+<!-- <<<<<<<<<<<<<>>>>>>>>>>>>>> -->
+
+<!-- <<<<<<<>>>>>>>>>> -->
+<div style="width: 190px; margin-left: 20px;">
+<label for="name">ID</label>
+<input type="text" class="form-control" id="id"
+     required
+     [(ngModel)]="nstd._id" name="_id"
+     #id="ngModel">
+<div [hidden]="id.valid || name.pristine"
+   class="alert alert-danger">
+_ID is required
+</div>
+</div>
+<!-- <<<<<<<<<<<<<>>>>>>>>>>>>>> -->
+
+<!-- <<<<<<<>>>>>>>>>> -->
+<div style="width: 190px; margin-left: 20px;">
+<label for="name">Email</label>
+<input type="text" class="form-control" id="email"
+     required
+     [(ngModel)]="nstd.Email" name="Email"
+     #email="ngModel">
+<div [hidden]="email.valid || name.pristine"
+   class="alert alert-danger">
+Email is required
+</div>
+<label for="power">Department Power</label>
+<select class="form-control"  id="power"
+      required
+      [(ngModel)]="nstd.Department" name="Department">
+<option *ngFor="let pow of departments" [value]="pow._id">{{pow.Name}}</option>
+</select>
+</div>
+<!-- <<<<<<<<<<<<<>>>>>>>>>>>>>> -->
+<button  style="margin-left: 80px;margin-top: 20px;" type="submit" class="btn btn-success" [disabled]="!form1.form.valid">Submit</button>
+
+
+
+</form>
